@@ -1,0 +1,5 @@
+<div class="project-card" (click)="showProject()">
+  <div class="detail-date">{{project?.startDate | date : "dd MMMM yyyy"}}-{{project?.endDate| date : "dd MMMM yyyy"}}</div>
+  <div class="title">{{project?.subject}}</div>
+  <div class="author">{{project?.createdBy}}</div>
+</div>

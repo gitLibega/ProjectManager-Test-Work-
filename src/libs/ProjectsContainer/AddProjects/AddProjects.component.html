@@ -1,0 +1,9 @@
+<div class="container">
+  <p>Введите JSON:</p>
+  <div class="error" *ngIf="form.get('json')?.hasError('json')">Некорретный json!</div>
+  <div class="error" *ngIf="form.get('json')?.hasError('required')">Поле не должно быть пустым!</div>
+  <form class="form" (ngSubmit)="onSubmit()" [formGroup]="form">
+    <textarea rows="20" cols="60" formControlName="json"></textarea>
+    <button type="submit">Сохранить</button>
+  </form>
+</div>

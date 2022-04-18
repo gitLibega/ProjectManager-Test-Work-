@@ -1,0 +1,35 @@
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+
+    p {
+        font-weight: bold;
+    }   
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            width: 150px;
+            height: 30px;
+            font-size: 15px;
+            color: white;
+            border: none;
+            margin-top: 10px;
+            background-color: rgb(207, 201, 201);
+            cursor: pointer;
+        }
+
+        textarea {
+            border: 3px gray solid !important;
+            resize: none; 
+        }
+    } 
+    
+    .error {
+        color: red;
+    }
+}

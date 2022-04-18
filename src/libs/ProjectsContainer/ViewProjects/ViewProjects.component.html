@@ -1,0 +1,8 @@
+<div class="view-form">
+  <section class="projects-list">
+    <div *ngFor="let proj of projects">
+      <app-project-card [project]="proj"></app-project-card>
+    </div>
+  </section>
+ <router-outlet></router-outlet>
+</div>

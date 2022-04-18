@@ -1,0 +1,11 @@
+
+
+.view-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .projects-list {
+        border: 1px gray solid;
+    }
+}
