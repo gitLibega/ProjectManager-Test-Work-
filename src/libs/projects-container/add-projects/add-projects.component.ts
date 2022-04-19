@@ -4,9 +4,9 @@ import { JsonValidator } from 'src/validators/json.validator';
 import { ProjectsService } from '../services/projects.service';
 
 @Component({
-  selector: 'app-AddProjects',
-  templateUrl: './AddProjects.component.html',
-  styleUrls: ['./AddProjects.component.scss'],
+  selector: 'app-add-projects',
+  templateUrl: './add-projects.component.html',
+  styleUrls: ['./add-projects.component.scss'],
   providers:[]
 })
 export class AddProjectsComponent implements OnInit {

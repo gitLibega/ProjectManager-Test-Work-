@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from 'src/entities/entity';
+import { DateValidator } from 'src/validators/date.validator';
 import { ProjectsService } from '../../services/projects.service';
 
 @Component({
@@ -27,8 +28,7 @@ export class ProjectDetailComponent implements OnInit {
 
     this.route.params.subscribe(param => {
       const id = param['id'];
-      if(id){     
-        console.log(this.model)   
+      if(id){
         this.model = this.projectsService.getProjectById(id);
         this.form.patchValue({
           ...this.model,
@@ -49,8 +49,8 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   validate() {
-    this.form.controls["startDate"].setValidators([Validators.required]);
-    this.form.controls["endDate"].setValidators([Validators.required]);
+    this.form.controls["startDate"].setValidators([Validators.required, DateValidator.check()]);
+    this.form.controls["endDate"].setValidators([Validators.required, DateValidator.check()]);
     this.form.controls["createdBy"].setValidators([Validators.required]);
     this.form.controls["description"].setValidators([Validators.required]);
 

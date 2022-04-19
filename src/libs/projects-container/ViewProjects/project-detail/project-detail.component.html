@@ -1,0 +1,30 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form"> 
+<div class="detail">
+  <div class="title">{{model.subject}}</div>
+  <div class="error" *ngIf="form.get('description')?.hasError('required')">Поле Описание не должно быть пустым!</div>
+  <div class="error" *ngIf="form.get('createdBy')?.hasError('required')">Поле Author не должно быть пустым!</div>
+  <div class="error" *ngIf="form.get('startDate')?.hasError('required')">Поле Дата начала не должно быть пустым!</div>
+  <div class="error" *ngIf="form.get('endDate')?.hasError('required')">Поле Дата окончания не должно быть пустым!</div>
+  <div class="error" *ngIf="form.get('startDate')?.hasError('date')">Поле Дата начала имеет неверный формат!</div>
+  <div class="error" *ngIf="form.get('endDate')?.hasError('date')">Поле Дата окончания имеет неверный формат!</div>  
+  <div class="project-data">      
+    <div class="input">
+      <label>Дата Начала</label>
+      <input type="text" formControlName="startDate" />
+    </div>
+    <div class="input">
+      <label>Дата окончания</label>
+      <input type="text" formControlName="endDate" />
+    </div>
+    <div class="input">
+      <label>Автор</label>
+      <input type="text" formControlName="createdBy" />
+    </div>
+    <div class="input">
+      <label>Описание</label>
+      <textarea cols="40" rows="2" type="text" formControlName="description" ></textarea>
+    </div>
+  </div> 
+  <button class="button" type="submit">Изменить</button>
+</div>
+</form> 

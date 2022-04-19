@@ -39,7 +39,6 @@ getProjectById(id: number): Project{
 }
 
 updateProject(model: Project) {
-  console.log(model);
   for(let [index, item] of this.projects.entries()){
     if(item.id == model.id) {
       this.projects[index] = model;

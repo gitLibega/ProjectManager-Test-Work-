@@ -5,9 +5,9 @@ import { Project } from 'src/entities/entity';
 import { ProjectsService } from '../services/projects.service';
 
 @Component({
-  selector: 'app-ViewProjects',
-  templateUrl: './ViewProjects.component.html',
-  styleUrls: ['./ViewProjects.component.scss']
+  selector: 'app-view-projects.',
+  templateUrl: './view-projects.component.html',
+  styleUrls: ['./view-projects.component.scss']
 })
 export class ViewProjectsComponent implements OnInit {
   projects: Project[] = [];

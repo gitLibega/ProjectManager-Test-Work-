@@ -1,15 +1,15 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
-import { ProjectsContainerComponent } from './ProjectsContainer/ProjectsContainer.component';
-import { NavbarComponent } from './ProjectsContainer/Navbar/Navbar.component';
-import { AddProjectsComponent } from './ProjectsContainer/AddProjects/AddProjects.component';
-import { ViewProjectsComponent } from './ProjectsContainer/ViewProjects/ViewProjects.component';
+import { ProjectsContainerComponent } from './projects-container/projects-container.component';
+import { AddProjectsComponent } from './projects-container/add-projects/add-projects.component';
+import { ViewProjectsComponent } from './projects-container/ViewProjects/view-projects.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { ProjectDetailComponent } from './ProjectsContainer/ViewProjects/project-detail/project-detail.component';
+import { ProjectDetailComponent } from './projects-container/ViewProjects/project-detail/project-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProjectCardComponent } from './ProjectsContainer/ViewProjects/project-card/project-card.component';
+import { ProjectCardComponent } from './projects-container/ViewProjects/project-card/project-card.component';
 import '@angular/common/locales/global/ru';
+import { NavbarComponent } from './projects-container/navbar/navbar.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/add', pathMatch: 'full' },
